@@ -1,18 +1,20 @@
-import { totalCentOffPrice } from './util-hw1-cent-off';
-import { getSum } from './util-hw2-sum';
-import { getRandomIntegerInRange } from './util-hw3-random-number';
-import { studentsPaired } from './util-hw4-student-pairs';
-import { randomArray } from './util-hw5-random-array';
-import { getStudentInfo } from './util-hw6-student-info';
-import { getTotalTaxes } from './util-hw7-total-taxes';
+import totalCentOffPrice from './utils/util-hw2-sum';
+import getSum from './utils/util-hw2-sum';
+import getRandomIntegerInRange from './utils/util-hw3-random-number';
+import  studentsPaired  from './utils/util-hw4-student-pairs';
+import  getStudentInfo from './utils/util-hw6-student-info';
+import  randomArray from './utils/util-hw5-random-array';
+
+import './index.sass'
+import img from '../img/webpack_bg.png'
 
 /* HW_1 */
 const priceApple = 15.678;
 const priceOrange = 123.965;
 const pricePear = 90.2345;
-console.log(totalCentOffPrice(priceApple, priceOrange, pricePear));
+totalCentOffPrice(priceApple, priceOrange, pricePear);
 
-/* HW_2 */
+/* HW_2  */
 const numberStartFrom = 12;
 const numberEndWith = 69;
 const skipEven = true;
@@ -23,7 +25,7 @@ console.log(getRandomIntegerInRange(1, 100));
 
 /* HW_4 */
 const students = ['Олександр', 'Ігор', 'Олена', 'Іра', 'Олексій', 'Світлана'];
-studentsPaired(students);
+console.log(studentsPaired(students));
 
 /* HW_5 */
 randomArray(5, 1, 99);
@@ -61,6 +63,6 @@ const studentsArray = [
 
 getStudentInfo(studentsArray, 2);
 
-/* HW_7 */
-const ukraine = { tax: 0.195, middleSalary: 1789, vacancies: 11476 };
-getTotalTaxes(ukraine);
+
+document.body.innerHTML=`
+<img src = ${img}>`
